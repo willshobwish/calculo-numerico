@@ -1,5 +1,3 @@
-# import matplotlib.pyplot as plt
-# import numpy
 def f(x):
     return x * x + 2 * x + 1
 

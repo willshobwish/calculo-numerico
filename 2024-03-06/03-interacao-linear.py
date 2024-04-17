@@ -6,7 +6,7 @@ def function_1(x):
 
 
 x = 2.2
-tolerance = 0.001
+tolerance = 10**-3
 error = 1
 iteration = 0
 x_ = 2
