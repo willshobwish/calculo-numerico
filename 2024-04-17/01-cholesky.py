@@ -4,6 +4,14 @@ import math
 # np.transpose()
 
 
+def binet(matrix):
+    matrix = np.array(matrix)
+    determinante = 1
+    for i, _ in enumerate(matrix):
+        determinante = determinante * matrix[i][i] ** 2
+    return determinante
+
+
 def cholesky(matrix):
     matrix = np.array(matrix)
     matrix_g = np.tril(matrix)
@@ -29,6 +37,7 @@ def cholesky(matrix):
                 matrix_g[i][j] = (matrix[i][j] - somatorio) / matrix_g[j][j]
     print(f"Matriz resultado:\n{matrix_g}\n")
     print(f"Prova:\n{np.matmul(matrix_g, matrix_t)}")
+    return matrix_g
 
 
-cholesky([[4, 2, -4], [2, 10, 4], [-4, 4, 9]])
+print(binet(cholesky([[4, 2, -4], [2, 10, 4], [-4, 4, 9]])))
