@@ -6,7 +6,7 @@ def decomposition(matrix_a):
     l = np.identity(n)
     u = np.identity(n)
     for p in range(0, n):
-        for j in range(p, n):
+        for j in range(0, n):
             soma = 0
             if p != 1:
                 for k in range(0, p):
@@ -20,8 +20,7 @@ def decomposition(matrix_a):
                     soma += l[i][k] * u[k][p]
                 l[i][p] = (matrix_a[i][p] - soma) / u[p][p]
         l[p][p] = 1
-    print(l)
-    print(u)
+    print(f"Decomposição L:\n{l}\n\nDecomposição U:\n{u}\n\nProva:\n{np.matmul(l,u)}")
 
 
 decomposition([[5, 2, 1], [3, 1, 4], [1, 1, 3]])
