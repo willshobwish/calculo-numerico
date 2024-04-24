@@ -47,7 +47,12 @@ def question_13b(x):
     return math.cos(x) - math.exp(x)
 
 
+def question_14(x):
+    return x - 2 * math.sin(x)
+
+
 regula_falsi(function=function_1, xk=0, xk_1=0.5, tolerance=10**-4, max_iteration=40)
 regula_falsi(function=question_12, xk=-1, xk_1=1, tolerance=10**-5, max_iteration=40)
 regula_falsi(function=question_13a, xk=-4, xk_1=3, tolerance=10**-5, max_iteration=40)
 regula_falsi(function=question_13b, xk=-2, xk_1=-1, tolerance=10**-5, max_iteration=40)
+regula_falsi(function=question_14, xk=1.8, xk_1=3, tolerance=10**-3, max_iteration=40)
