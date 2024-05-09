@@ -1,6 +1,5 @@
 import numpy as np
 
-
 def gauss(matriz_a, vetor_b):
     matrix_new = matriz_a.copy()
     # print(f"Shape: {n}x{m}\nMatrix original:")

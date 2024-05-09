@@ -44,7 +44,7 @@ def question_13a(x):
 
 
 def question_13b(x):
-    return math.cos(x) - math.exp(x)
+    return math.cos(x) * math.exp(x)
 
 
 def question_14(x):

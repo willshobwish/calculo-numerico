@@ -41,6 +41,7 @@ def secant_method(function, xk, xk_1, tolerance, max_iteration):
         xk1 = (xk_1 * function(xk) - xk * function(xk_1)) / (
             function(xk) - function(xk_1)
         )
+
         error_1 = error
         error = error1
         error1 = abs(xk1 - xk) / abs(xk1)
@@ -77,6 +78,7 @@ secant_method(
 secant_method(
     function=question_11c, xk=1, xk_1=1.25, tolerance=10**-4, max_iteration=100
 )
+
 
 # secant_method(
 #     function=question_10, xk=1, xk_1=1.25, tolerance=10**-4, max_iteration=100
